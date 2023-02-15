@@ -4,14 +4,15 @@
 name: "Testcases for tools-python"
 
 on:
-  workflow_dispatch:
+ [ workflow_dispatch, pull_request]
 
 jobs:
   run-testcases:
     name: "Run Testcases"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
       - name: Set up Java Environment
         uses: actions/setup-java@v3
@@ -21,17 +22,16 @@ jobs:
 
       # user tool specific section starts here
 
-      - uses: actions/checkout@v3
       - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
-          python-version: 3.10
+          python-version: "3.10"
+
       - name: Installation
         run: |
           python -m pip install --upgrade pip
           python -m pip install --upgrade setuptools wheel setuptools_scm build
-          python -m build -nwx .
-          python -m pip install --upgrade ./dist/*.whl
+          python -m pip install git+https://github.com/spdx/tools-python.git@refactor-python-tools
         shell: bash
       - name: Run python scripts that use tools-python to create input file
         id: generate-input
@@ -45,14 +45,13 @@ jobs:
           python spdx-tools-python-solver/testcase8.py -t generationLicense.xml
 
       # user tool specific section ends here
-
       - name: Download testbed fat jar
         id: download-testbed-artifact
         uses: dawidd6/action-download-artifact@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: ci-cd-testbed.yaml
-          branch: master
+          branch: main
           name: testbed-artifact
 
       - name: Run test case
