@@ -36,13 +36,13 @@ jobs:
       - name: Run python scripts that use tools-python to create input file
         id: generate-input
         run: |
-          python spdx-tools-python-solver/testcase1.py -t generationMinimal.xml
-          python spdx-tools-python-solver/testcase2.py -t generationBaselineSbom.xml
-          python spdx-tools-python-solver/testcase3.py -t generationDocument.xml
-          python spdx-tools-python-solver/testcase4.py -t generationFile.xml
-          python spdx-tools-python-solver/testcase5.py -t generationPackage.xml
-          python spdx-tools-python-solver/testcase6.py -t generationSnippet.xml
-          python spdx-tools-python-solver/testcase8.py -t generationLicense.xml
+          python spdx-tools-python-solver/testcase_generationMinimal.py -t generationMinimal.xml
+          python spdx-tools-python-solver/testcase_generationBaselineSbom.py -t generationBaselineSbom.xml
+          python spdx-tools-python-solver/testcase_generationDocument.py -t generationDocument.xml
+          python spdx-tools-python-solver/testcase_generationFile.py -t generationFile.xml
+          python spdx-tools-python-solver/testcase_generationPackage.py -t generationPackage.xml
+          python spdx-tools-python-solver/testcase_generationSnippet.py -t generationSnippet.xml
+          python spdx-tools-python-solver/testcase_generationLicense.py -t generationLicense.xml
 
       # user tool specific section ends here
       - name: Download testbed fat jar
