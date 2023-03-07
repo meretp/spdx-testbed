@@ -11,14 +11,13 @@
 from datetime import datetime
 
 import click
-
-from spdx.model.actor import ActorType, Actor
+from spdx.model.actor import Actor, ActorType
 from spdx.model.annotation import Annotation, AnnotationType
 from spdx.model.checksum import Checksum, ChecksumAlgorithm
 from spdx.model.document import CreationInfo, Document
 from spdx.model.external_document_ref import ExternalDocumentRef
 from spdx.model.file import File
-from spdx.model.relationship import RelationshipType, Relationship
+from spdx.model.relationship import Relationship, RelationshipType
 from spdx.model.version import Version
 from spdx.writer.xml.xml_writer import write_document_to_file
 

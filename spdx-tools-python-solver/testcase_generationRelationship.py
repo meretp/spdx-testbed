@@ -11,7 +11,6 @@
 from datetime import datetime
 
 import click
-
 from spdx.model.actor import Actor, ActorType
 from spdx.model.checksum import Checksum, ChecksumAlgorithm
 from spdx.model.document import CreationInfo, Document

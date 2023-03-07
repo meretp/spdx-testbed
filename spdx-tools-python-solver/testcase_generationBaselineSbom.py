@@ -11,18 +11,12 @@
 from datetime import datetime
 
 import click
-
-from spdx.model.package import Package
-
-from spdx.model.relationship import Relationship, RelationshipType
-
 from spdx.model.actor import Actor, ActorType
-
 from spdx.model.checksum import Checksum, ChecksumAlgorithm
-
-from spdx.model.document import Document, CreationInfo
+from spdx.model.document import CreationInfo, Document
+from spdx.model.package import Package
+from spdx.model.relationship import Relationship, RelationshipType
 from spdx.model.spdx_none import SpdxNone
-
 from spdx.writer.xml.xml_writer import write_document_to_file
 
 

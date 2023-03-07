@@ -11,16 +11,11 @@
 from datetime import datetime
 
 import click
-from spdx.model.relationship import Relationship, RelationshipType
-
 from spdx.model.actor import Actor, ActorType
-
 from spdx.model.checksum import Checksum, ChecksumAlgorithm
-
+from spdx.model.document import CreationInfo, Document
 from spdx.model.file import File
-
-from spdx.model.document import Document, CreationInfo
-
+from spdx.model.relationship import Relationship, RelationshipType
 from spdx.writer.xml.xml_writer import write_document_to_file
 
 
@@ -37,6 +32,6 @@ def main(target: str):
     doc = Document(creation_info, files=[file], relationships=[relationship])
     write_document_to_file(doc, target)
 
+
 if __name__ == "__main__":
     main()
-

@@ -12,10 +12,9 @@ from datetime import datetime
 
 import click
 from license_expression import get_spdx_licensing
-
 from spdx.model.actor import Actor, ActorType
 from spdx.model.checksum import Checksum, ChecksumAlgorithm
-from spdx.model.document import Document, CreationInfo
+from spdx.model.document import CreationInfo, Document
 from spdx.model.extracted_licensing_info import ExtractedLicensingInfo
 from spdx.model.file import File
 from spdx.model.package import Package, PackageVerificationCode

@@ -12,14 +12,14 @@ from datetime import datetime
 
 import click
 from license_expression import get_spdx_licensing
-
 from spdx.model.actor import Actor, ActorType
 from spdx.model.annotation import Annotation, AnnotationType
 from spdx.model.checksum import Checksum, ChecksumAlgorithm
-from spdx.model.document import Document, CreationInfo
+from spdx.model.document import CreationInfo, Document
 from spdx.model.file import File
-from spdx.model.package import Package, PackageVerificationCode, PackagePurpose, ExternalPackageRef, \
-    ExternalPackageRefCategory
+from spdx.model.package import (ExternalPackageRef, ExternalPackageRefCategory,
+                                Package, PackagePurpose,
+                                PackageVerificationCode)
 from spdx.model.relationship import Relationship, RelationshipType
 from spdx.writer.xml.xml_writer import write_document_to_file
 
