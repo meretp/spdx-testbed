@@ -29,7 +29,7 @@ from spdx.writer.xml.xml_writer import write_document_to_file
 def main(target: str):
     creation_info = CreationInfo(spdx_version="SPDX-2.3", spdx_id="SPDXRef-DOCUMENT", name="document name",
                                  document_namespace="https://some.namespace", data_license="CC0-1.0",
-                                 creators=[Actor(ActorType.TOOL, "test-tool")], created=datetime(2022,1,1,0,0))
+                                 creators=[Actor(ActorType.TOOL, "test-tool")], created=datetime(2022, 1, 1))
     file = File(name="./foo.txt", spdx_id="SPDXRef-somefile",
                 checksums=[Checksum(ChecksumAlgorithm.SHA1, "d6a770ba38583ed4bb4525bd96e50461655d2758")])
     relationship = Relationship(spdx_element_id="SPDXRef-DOCUMENT", related_spdx_element_id="SPDXRef-somefile",

@@ -32,7 +32,7 @@ def main(target: str):
     creation_info = CreationInfo(spdx_version="SPDX-2.3", spdx_id="SPDXRef-DOCUMENT", name="document name",
                                  document_namespace="https://some.namespace", data_license="CC0-1.0",
                                  creators=[Actor(ActorType.TOOL, "test-tool")],
-                                 created=datetime(2022, 1, 1, 0, 0))
+                                 created=datetime(2022, 1, 1))
     package = Package(spdx_id="SPDXRef-somepackage", name="package name", version="2.2.1",
                       supplier=Actor(ActorType.PERSON, "Jane Doe", "jane.doe@example.com"), files_analyzed=False,
                       checksums=[Checksum(ChecksumAlgorithm.SHA1, "d6a770ba38583ed4bb4525bd96e50461655d2758")],

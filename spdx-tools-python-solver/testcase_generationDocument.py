@@ -34,11 +34,11 @@ def main(target: str):
                                  document_namespace="https://some.namespace", data_license="CC0-1.0",
                                  creators=[Actor(ActorType.PERSON, "Jane Doe", "jane.doe@example.com"),
                                            Actor(ActorType.TOOL, "test-tool")],
-                                 created=datetime(2022, 1, 1, 0, 0), license_list_version=Version(3, 7),
+                                 created=datetime(2022, 1, 1), license_list_version=Version(3, 7),
                                  creator_comment="creation comment", document_comment="document comment",
                                  external_document_refs=[external_document_ref])
     annotation = Annotation(spdx_id="SPDXRef-DOCUMENT", annotation_type=AnnotationType.REVIEW,
-                            annotation_date=datetime(2022, 1, 1, 0, 0), annotation_comment="Document level annotation",
+                            annotation_date=datetime(2022, 1, 1), annotation_comment="Document level annotation",
                             annotator=Actor(ActorType.PERSON, "Document Reviewer", "mail@mail.com"))
     file = File(name="./foo.txt", spdx_id="SPDXRef-somefile",
                 checksums=[Checksum(ChecksumAlgorithm.SHA1, "d6a770ba38583ed4bb4525bd96e50461655d2758")])

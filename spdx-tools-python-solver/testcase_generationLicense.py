@@ -31,7 +31,7 @@ def main(target: str):
     creation_info = CreationInfo(spdx_version="SPDX-2.3", spdx_id="SPDXRef-DOCUMENT", name="document name",
                                  data_license="CC0-1.0", document_namespace="https://some.namespace",
                                  creators=[Actor(ActorType.TOOL, "test-tool")],
-                                 created=datetime(2022, 1, 1, 0, 0))
+                                 created=datetime(2022, 1, 1))
     extracted_licensing_info = [
         ExtractedLicensingInfo(license_id="LicenseRef-1", extracted_text="extracted license text",
                                license_name="extracted license 1",

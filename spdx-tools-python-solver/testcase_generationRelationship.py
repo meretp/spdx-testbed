@@ -26,7 +26,7 @@ def main(target: str):
     creation_info = CreationInfo(spdx_version="SPDX-2.3", spdx_id="SPDXRef-DOCUMENT", name="document name",
                                  data_license="CC0-1.0", document_namespace="https://some.namespace",
                                  creators=[Actor(ActorType.TOOL, "test-tool")],
-                                 created=datetime(2022, 1, 1, 0, 0))
+                                 created=datetime(2022, 1, 1))
     file1 = File(spdx_id="SPDXRef-fileA", name="./fileA.c",
                  checksums=[Checksum(ChecksumAlgorithm.SHA1, value="d6a770ba38583ed4bb4525bd96e50461655d2758")])
     file2 = File(spdx_id="SPDXRef-fileB", name="./fileB.c",
