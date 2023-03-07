@@ -11,8 +11,6 @@ jobs:
     name: "Run Testcases"
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
 
       - name: Set up Java Environment
         uses: actions/setup-java@v3
